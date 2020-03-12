@@ -25,11 +25,14 @@ Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kkoomen/vim-doge'
 Plug 'lfv89/vim-interestingwords'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/echodoc.vim'
 Plug 'SirVer/ultisnips'
 Plug 'sjl/gundo.vim'
 Plug 'TaDaa/vimade'
@@ -41,6 +44,7 @@ Plug 'Yggdroot/indentLine'
 
 " Python
 Plug 'davidhalter/jedi-vim'
+Plug 'deoplete-plugins/deoplete-jedi'
 
 " Themes
 Plug 'vim-airline/vim-airline-themes'
@@ -120,7 +124,7 @@ set ruler
 set cursorline
 
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -159,6 +163,9 @@ set magic
 set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
+
+" Don't show vim mode (shown on airline already)
+set noshowmode
 
 " Show indicators of space, tab etc.
 " set list
@@ -331,7 +338,22 @@ nnoremap <leader>y yiw
 " PLUGIN SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Gundo ################################################################################
+" deoplete.nvim ####################################################################################
+
+" Use deoplete.
+let g:deoplete#enable_at_startup=1
+
+
+" echodoc.vim ######################################################################################
+
+" Enable echodoc
+let g:echodoc#enable_at_startup=1
+
+" Where the documentation is displayed
+let g:echodoc#type = 'floating'
+
+
+" Gundo ############################################################################################
 
 "Display the undo tree with <leader>u.
 nnoremap <leader>u :GundoToggle<CR>
@@ -344,14 +366,16 @@ let g:gundo_right=1
 let g:gundo_width=60
 
 
-" jedi-vim ################################################################################
+" jedi-vim #########################################################################################
+
+" Don't use autocompletion (use deoplete-jedi instead)
+let g:jedi#completions_enabled = 0
 
 " Don't show preview window
 autocmd FileType python setlocal completeopt-=preview
 
-" Show function call signatures in Vim's command line
-let g:jedi#show_call_signatures=2
-set noshowmode
+" Don't show function call signatures
+let g:jedi#show_call_signatures=0
 
 " Use with SuperTab
 let g:SuperTabDefaultCompletionType='<c-x><c-o>'
