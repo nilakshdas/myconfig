@@ -11,7 +11,7 @@ endif
 call plug#begin(stdpath('data') . '/plugged')
 
 
-" Plugins ################################################################################
+" Plugins ##########################################################################################
 
 " Make sure you use single quotes
 " >>>>>>>>>> Enter plugins below this line >>>>>>>>>>
@@ -58,7 +58,7 @@ call plug#end()
 " VIM SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" General ################################################################################
+" General ##########################################################################################
 
 " Set mapleader
 let mapleader=','
@@ -103,7 +103,7 @@ imap qq <C-o>
 autocmd BufWritePre * :%s/\s\+$//e
 
 
-" VIM user interface ################################################################################
+" VIM user interface ###############################################################################
 
 " Set 5 lines to the cursor - when moving vertically using j/k
 set so=5
@@ -187,7 +187,7 @@ nmap <leader>: :set number!<cr>
 nmap <leader>; :set relativenumber!<cr>
 
 
-" Colors and Fonts ########################################
+" Colors and Fonts #################################################################################
 
 " Enable syntax highlighting
 syntax enable
@@ -226,7 +226,7 @@ set background=dark
 colorscheme xcodedark
 
 
-" Files, backups and undo ################################################################################
+" Files, backups and undo ##########################################################################
 
 " Turn backup off, since most stuff is in SVN, git etc. anyway...
 set nobackup
@@ -242,7 +242,7 @@ endif
 nmap U `.
 
 
-" Text, tab and indent related ################################################################################
+" Text, tab and indent related #####################################################################
 
 " Use spaces instead of tabs
 set expandtab
@@ -263,7 +263,7 @@ set si "Smart indent
 set wrap "Wrap lines
 
 
-" Moving around buffers ################################################################################
+" Moving around buffers ############################################################################
 
 " Smart way to move between windows
 map <S-j> <C-W>j
@@ -286,7 +286,7 @@ map <leader>t<leader> :tabnext
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 
-" Editing mappings ################################################################################
+" Editing mappings #################################################################################
 
 " Move to beginning/end of line:
 nnoremap B ^
@@ -385,7 +385,7 @@ let g:jedi#goto_command = "<leader><leader>g"
 let g:jedi#goto_assignments_command = "<leader>g"
 
 
-" NERD Commenter ################################################################################
+" NERD Commenter ###################################################################################
 
 " Map comment toggle
 nnoremap <leader>cc :call NERDComment(0, "toggle")<cr>
@@ -412,7 +412,7 @@ let g:NERDToggleCheckAllLines=1
 let g:NERDDefaultAlign = 'left'
 
 
-" NERDTree ################################################################################
+" NERDTree #########################################################################################
 
 " Start Startify and NERDTree by default
 autocmd StdinReadPre * let s:std_in=1
@@ -437,7 +437,7 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 nnoremap <leader>q :bp<cr>:bd #<cr>
 
 
-" Startify ################################################################################
+" Startify #########################################################################################
 
 let g:startify_session_autoload=1
 let g:startify_change_to_vcs_root=1
@@ -458,7 +458,7 @@ let g:startify_lists = [
 nnoremap <leader>ss :Startify<cr>
 
 
-" UltiSnips ################################################################################
+" UltiSnips ########################################################################################
 
 " Trigger configuration
 let g:UltiSnipsExpandTrigger="<leader><tab>"
@@ -469,14 +469,14 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 
-" vim-airline ################################################################################
+" vim-airline ######################################################################################
 
 " Automatically displays all buffers when there's only one tab open
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme="papercolor"
 
 
-" vim-doge ################################################################################
+" vim-doge #########################################################################################
 
 " The mapping to trigger DoGe
 let g:doge_mapping='<leader><leader><tab>'
@@ -485,12 +485,12 @@ let g:doge_mapping='<leader><leader><tab>'
 let g:doge_doc_standard_python = 'google'
 
 
-" vim-gitgutter ################################################################################
+" vim-gitgutter ####################################################################################
 
 let g:gitgutter_map_keys=0
 
 
-" vim-interestingwords ################################################################################
+" vim-interestingwords #############################################################################
 
 " Unset default mapping and set new mapping
 nnoremap <Plug> <Plug>InterestingWords
@@ -505,13 +505,13 @@ nnoremap <silent> N :call WordNavigation(0)<cr>
 " LANGUAGE SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Python ################################################################################
+" Python ###########################################################################################
 
 " Show margin at 80 characters
 au! BufNewFile,BufRead *.py set colorcolumn=80
 
 
-" Svelte ################################################################################
+" Svelte ###########################################################################################
 
 " Set the filetype as HTML
 au! BufNewFile,BufRead *.svelte set ft=html
