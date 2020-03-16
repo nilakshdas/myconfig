@@ -350,7 +350,7 @@ let g:deoplete#enable_at_startup=1
 let g:echodoc#enable_at_startup=1
 
 " Where the documentation is displayed
-let g:echodoc#type = 'floating'
+let g:echodoc#type = 'echo'
 
 
 " Gundo ############################################################################################
