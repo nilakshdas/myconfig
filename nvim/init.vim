@@ -8,13 +8,12 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin(stdpath('data') . '/plugged')
-
 
 " Plugins ##########################################################################################
 
-" Make sure you use single quotes
+call plug#begin(stdpath('data') . '/plugged')
 " >>>>>>>>>> Enter plugins below this line >>>>>>>>>>
+" Make sure you use single quotes
 
 " General
 Plug 'airblade/vim-gitgutter'
@@ -29,6 +28,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdcommenter'
+Plug 'psf/black', { 'tag': '19.10b0' }
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -343,6 +343,12 @@ nnoremap <leader>y yiw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Black ############################################################################################
+
+" Run Black on save
+autocmd BufWritePre *.py execute ':Black'
+
 
 " deoplete.nvim ####################################################################################
 
