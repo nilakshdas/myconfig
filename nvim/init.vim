@@ -334,7 +334,7 @@ nnoremap <leader><bs> "_diw
 inoremap <leader><bs> <C-o>"_diw
 
 " Replace a word
-nnoremap <leader>r viwp
+nnoremap S "_diwP
 
 " Copy a word
 nnoremap <leader>y yiw
