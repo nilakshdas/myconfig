@@ -186,6 +186,9 @@ set number
 nmap <leader>: :set number!<cr>
 nmap <leader>; :set relativenumber!<cr>
 
+" Exit INSERT mode when focus is lost from the buffer
+autocmd BufLeave,TabLeave,FocusLost * call feedkeys("\<C-\>\<C-n>")
+
 
 " Colors and Fonts #################################################################################
 
@@ -240,6 +243,9 @@ endif
 
 " Go to last line of change (helpful to see which line will be undo'd)
 nmap U `.
+
+" Autosave on losing focus / leaving the buffer
+autocmd BufLeave,TabLeave,FocusLost * silent! update
 
 
 " Text, tab and indent related #####################################################################
