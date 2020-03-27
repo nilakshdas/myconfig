@@ -19,6 +19,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dense-analysis/ale'
+Plug 'dkprice/vim-easygrep'
 Plug 'ervandew/supertab'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
@@ -28,7 +29,6 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdcommenter'
-Plug 'psf/black', { 'tag': '19.10b0' }
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -45,6 +45,7 @@ Plug 'Yggdroot/indentLine'
 " Python
 Plug 'davidhalter/jedi-vim'
 Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'psf/black', { 'tag': '19.10b0' }
 
 " Themes
 Plug 'vim-airline/vim-airline-themes'
@@ -317,6 +318,9 @@ nnoremap <S-tab> <S-<><S-<>
 vnoremap <tab> >gv
 vnoremap <S-tab> <gv
 
+" Undefine the <CR> mapping for quickfix buffer
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+
 " Make the d key delete instead of cut
 nnoremap x "_x
 nnoremap X "_X
@@ -520,7 +524,7 @@ nnoremap <silent> N :call WordNavigation(0)<cr>
 " Python ###########################################################################################
 
 " Show margin at 80 characters
-au! BufNewFile,BufRead *.py set colorcolumn=80
+" au! BufNewFile,BufRead *.py set colorcolumn=80
 
 
 " Svelte ###########################################################################################
