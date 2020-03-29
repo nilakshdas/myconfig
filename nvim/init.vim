@@ -47,6 +47,11 @@ Plug 'davidhalter/jedi-vim'
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'psf/black', { 'tag': '19.10b0' }
 
+" JavaScript
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+
 " Themes
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arzg/vim-colors-xcode'
