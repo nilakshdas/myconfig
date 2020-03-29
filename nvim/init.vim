@@ -232,7 +232,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 set background=dark
-colorscheme xcodedark
+colorscheme xcodewwdc
 
 
 " Files, backups and undo ##########################################################################
@@ -449,7 +449,8 @@ let g:NERDTreeWinSize=40
 let NERDTreeShowHidden=1
 
 " Mirror the open directories across tabs
-autocmd BufWinEnter * NERDTreeMirror
+let blacklist=['qf']
+autocmd BufWinEnter * if index(blacklist, &ft) < 0 | silent NERDTreeMirror
 
 " Automatically quit vim if NERDTree is last and only buffer
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
