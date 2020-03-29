@@ -364,6 +364,9 @@ autocmd BufWritePre *.py execute ':Black'
 " Use deoplete.
 let g:deoplete#enable_at_startup=1
 
+" Press enter to select only and not insert a new line
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 
 " echodoc.vim ######################################################################################
 
