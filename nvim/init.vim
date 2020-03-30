@@ -92,6 +92,7 @@ set updatetime=300
 
 " Fast saving (SHORTCUT)
 nmap <leader>w :w!<cr>
+imap <leader>w <ESC>:w!<cr>
 
 " :W sudo saves the file (SHORTCUT)
 " (useful for handling the permission-denied error)
@@ -347,6 +348,9 @@ nnoremap S "_diwP
 
 " Copy a word
 nnoremap <leader>y yiw
+
+" Undo in insert mode
+inoremap <C-z> <C-o>u
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
