@@ -8,6 +8,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+silent !python -c "import neovim" || (pip install neovim > /dev/null)
+
 
 " Plugins ##########################################################################################
 
