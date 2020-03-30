@@ -26,6 +26,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'kkoomen/vim-doge'
 Plug 'lfv89/vim-interestingwords'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'machakann/vim-highlightedyank'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdcommenter'
@@ -51,6 +52,9 @@ Plug 'psf/black', { 'tag': '19.10b0' }
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+
+" Docker
+Plug 'deoplete-plugins/deoplete-docker'
 
 " Themes
 Plug 'vim-airline/vim-airline-themes'
