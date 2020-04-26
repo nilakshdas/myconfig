@@ -61,6 +61,7 @@ Plug 'deoplete-plugins/deoplete-docker'
 " Themes
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arzg/vim-colors-xcode'
+Plug 'chuling/vim-equinusocio-material'
 
 " <<<<<<<<<< Enter plugins above this line <<<<<<<<<<
 call plug#end()
@@ -398,6 +399,12 @@ let g:gundo_prefer_python3=1
 " Show Gundo window on the right
 let g:gundo_right=1
 let g:gundo_width=60
+
+
+" indentLine #######################################################################################
+
+" Disable indentLine for markdown files
+let g:indentLine_fileTypeExclude = ['markdown']
 
 
 " jedi-vim #########################################################################################
