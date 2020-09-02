@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -xe
+
 cd ~
 sudo -v
 
