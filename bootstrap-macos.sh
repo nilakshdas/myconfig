@@ -35,18 +35,28 @@ brew install ${HOMEBREW_PACKAGES[@]}
 HOMEBREW_CASK_PACKAGES=(
     1clipboard
     anaconda
+    bluejeans
     cryptomator
     docker
+    dropbox
     firefox
     forklift
     iterm2
     lastpass
+    microsoft-outlook
+    microsoft-teams
     nordvpn
+    notion
+    numi
+    skype-for-business
+    slack
     spotify
     sourcetree
     switchhosts
     tiles
     visual-studio-code
+    webex-meetings
+    whatsapp
 )
 brew cask install ${HOMEBREW_CASK_PACKAGES[@]}
 
