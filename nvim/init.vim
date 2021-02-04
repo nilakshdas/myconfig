@@ -26,6 +26,7 @@ Plug 'ervandew/supertab'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'kkoomen/vim-doge'
+Plug 'lervag/vimtex'
 Plug 'lfv89/vim-interestingwords'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'machakann/vim-highlightedyank'
@@ -509,6 +510,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window
 let g:UltiSnipsEditSplit="vertical"
+
+" Set source directories
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "custom_snippets"]
 
 
 " vim-airline ######################################################################################
