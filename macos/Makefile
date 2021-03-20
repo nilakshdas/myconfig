@@ -2,7 +2,7 @@ BASH:=/bin/bash
 BREW:=/usr/local/Homebrew/bin/brew
 NODE:=/usr/local/bin/node
 NPM:=/usr/local/bin/npm
-CONDA:=/opt/anaconda3/bin/conda
+CONDA:=/usr/local/anaconda3/bin/conda
 POETRY:=$(HOME)/.poetry/bin/poetry
 ZSHRC:=$(HOME)/.zshrc
 
