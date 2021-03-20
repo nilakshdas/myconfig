@@ -24,7 +24,7 @@ $(CASK_FONTS): $(CASK_FONTS_TAP) $(SVN_CELLAR) | $(BREW_PKG)
 
 PASSWORD_FONT:=$(HOME)/Library/Fonts/Password.otf
 
-$(PASSWORD_FONT): Password.otf
+$(PASSWORD_FONT): fonts/Password.otf
 	cp $< $@
 
 ##################################################
