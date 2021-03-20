@@ -36,7 +36,7 @@ $(POETRY):
 	curl -sSL "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python -
 
 .PHONY: fonts
-fonts: $(CASK_FONTS) $(SF_MONO_FONT)
+fonts: $(CASK_FONTS) $(PASSWORD_FONT) $(SF_MONO_FONT)
 
 .PHONY: setup_zsh
 setup_zsh: $(OH_MY_ZSH) $(POWERLEVEL10K_THEME)

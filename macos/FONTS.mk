@@ -22,6 +22,13 @@ $(CASK_FONTS): $(CASK_FONTS_TAP) $(SVN_CELLAR) | $(BREW_PKG)
 
 ##################################################
 
+PASSWORD_FONT:=$(HOME)/Library/Fonts/Password.otf
+
+$(PASSWORD_FONT): Password.otf
+	cp $< $@
+
+##################################################
+
 SF_MONO_FONT:=/Library/Fonts/SF-Mono-Regular.otf
 
 $(SF_MONO_FONT):
