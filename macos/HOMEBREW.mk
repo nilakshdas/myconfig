@@ -28,11 +28,15 @@ $(HOMEBREW_PACKAGES): $(BREW) | $(BREW_PKG)
 
 $(BREW_PKG)/sshfs: $(BREW_PKG)/osxfuse
 
+.DELETE_ON_ERROR: $(BREW_PKG)/logitech-options
+$(BREW_PKG)/logitech-options: $(BREW) | $(BREW_PKG)
+	$(BREW) install homebrew/cask-drivers/logitech-options | tee $@; test $${PIPESTATUS[0]} -eq 0
+
 .DELETE_ON_ERROR: $(BREW_PKG)/fzf-complete
 $(BREW_PKG)/fzf-complete: $(BREW_PKG)/fzf
 	/usr/local/opt/fzf/install --all | tee $@; test $${PIPESTATUS[0]} -eq 0
 
-HOMEBREW_PACKAGES:=$(HOMEBREW_PACKAGES) $(BREW_PKG)/fzf-complete
+HOMEBREW_PACKAGES:=$(HOMEBREW_PACKAGES) $(BREW_PKG)/logitech-options $(BREW_PKG)/fzf-complete
 
 ##################################################
 
