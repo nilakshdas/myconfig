@@ -12,6 +12,7 @@ HOMEBREW_PACKAGES:=\
 	$(BREW_PKG)/fzf \
 	$(BREW_PKG)/git \
 	$(BREW_PKG)/htop \
+	$(BREW_PKG)/jq \
 	$(BREW_PKG)/mas \
 	$(BREW_PKG)/neovim \
 	$(BREW_PKG)/node \
