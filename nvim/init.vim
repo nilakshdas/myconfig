@@ -9,6 +9,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 silent !python -c "import neovim" || (pip install neovim > /dev/null)
+silent !black --version || (pip install black > /dev/null)
 
 
 " Plugins ##########################################################################################
